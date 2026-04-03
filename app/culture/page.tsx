@@ -41,61 +41,6 @@ export default function CulturePage() {
         gradient="from-amber-800 to-badaga-bark"
       />
 
-      {/* ── FESTIVALS ─────────────────────────────────────────────── */}
-      <section id="festivals" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif font-bold text-badaga-bark mb-2 text-center">
-            Sacred Festivals
-          </h2>
-          <p className="text-center text-badaga-earth mb-10 max-w-2xl mx-auto">
-            Badaga festivals are not mere celebrations: they are the living heartbeat of community identity, performed with the same rituals for centuries.
-          </p>
-
-          <div className="space-y-6">
-            {festivals.map((festival, i) => (
-              <article
-                key={festival.id}
-                className="bg-badaga-cream rounded-2xl p-6 sm:p-8 border border-badaga-earth/20"
-              >
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-badaga-gold/20 text-badaga-gold font-serif font-bold text-xl flex items-center justify-center">
-                    {i + 1}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-3 mb-2">
-                      <h3 className="font-serif font-bold text-badaga-bark text-xl">{festival.name}</h3>
-                      {festival.nameBadaga && (
-                        <span className="text-sm text-badaga-earth/60">{festival.nameBadaga}</span>
-                      )}
-                      {festival.month && (
-                        <span className="text-xs bg-badaga-tea/10 text-badaga-tea px-3 py-0.5 rounded-full">
-                          {festival.month}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-badaga-earth leading-relaxed mb-4">{festival.description}</p>
-                    <div className="mb-3">
-                      <h4 className="font-semibold text-badaga-bark text-sm mb-2">Key Rituals:</h4>
-                      <ul className="space-y-1">
-                        {festival.rituals.map((ritual) => (
-                          <li key={ritual} className="text-sm text-badaga-earth flex items-start gap-2">
-                            <span className="text-badaga-gold mt-0.5">•</span>
-                            {ritual}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="bg-badaga-forest/10 rounded-lg p-3 border-l-4 border-badaga-tea">
-                      <p className="text-sm text-badaga-bark italic">{festival.significance}</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── FOOD ──────────────────────────────────────────────────── */}
       <section id="food" className="py-16 bg-badaga-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -225,6 +170,61 @@ export default function CulturePage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FESTIVALS ─────────────────────────────────────────────── */}
+      <section id="festivals" className="py-16 bg-badaga-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-serif font-bold text-badaga-bark mb-2 text-center">
+            Sacred Festivals
+          </h2>
+          <p className="text-center text-badaga-earth mb-10 max-w-2xl mx-auto">
+            Badaga festivals are not mere celebrations: they are the living heartbeat of community identity, performed with the same rituals for centuries.
+          </p>
+
+          <div className="space-y-6">
+            {festivals.map((festival, i) => (
+              <article
+                key={festival.id}
+                className="bg-white rounded-2xl p-6 sm:p-8 border border-badaga-earth/20"
+              >
+                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-badaga-gold/20 text-badaga-gold font-serif font-bold text-xl flex items-center justify-center">
+                    {i + 1}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                      <h3 className="font-serif font-bold text-badaga-bark text-xl">{festival.name}</h3>
+                      {festival.nameBadaga && (
+                        <span className="text-sm text-badaga-earth/60">{festival.nameBadaga}</span>
+                      )}
+                      {festival.month && (
+                        <span className="text-xs bg-badaga-tea/10 text-badaga-tea px-3 py-0.5 rounded-full">
+                          {festival.month}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-badaga-earth leading-relaxed mb-4">{festival.description}</p>
+                    <div className="mb-3">
+                      <h4 className="font-semibold text-badaga-bark text-sm mb-2">Key Rituals:</h4>
+                      <ul className="space-y-1">
+                        {festival.rituals.map((ritual) => (
+                          <li key={ritual} className="text-sm text-badaga-earth flex items-start gap-2">
+                            <span className="text-badaga-gold mt-0.5">•</span>
+                            {ritual}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="bg-badaga-forest/10 rounded-lg p-3 border-l-4 border-badaga-tea">
+                      <p className="text-sm text-badaga-bark italic">{festival.significance}</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

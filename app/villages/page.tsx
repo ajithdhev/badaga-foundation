@@ -140,9 +140,11 @@ export default function VillagesPage() {
                     <h2 className="font-serif font-bold text-badaga-cream text-xl">
                       {seemai.name}
                     </h2>
-                    <div className="mt-1">
-                      <span className="text-badaga-cream/60 text-xs">{seemai.description}</span>
-                    </div>
+                    {seemai.description && (
+                      <div className="mt-1">
+                        <span className="text-badaga-cream/60 text-xs">{seemai.description}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="flex items-center gap-3 flex-shrink-0">
                     <span className="bg-badaga-gold/20 text-badaga-gold px-3 py-1 rounded-full text-sm font-semibold">

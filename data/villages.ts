@@ -6,7 +6,7 @@ export const seemais: SeemaiData[] = [
     id: "thodha",
     name: "Thodha Naadu Seemae",
     aliases: "Raja Padagiri Seemae",
-    description: "Boundaries from Solur to Kookkal Thore",
+    description: "",
     hatties: [
       "Aalatti",
       "Ajjoor",
@@ -97,9 +97,9 @@ export const seemais: SeemaiData[] = [
   },
   {
     id: "porangaadu",
-    name: "Porangaadu Seemay",
+    name: "Porangaadu Seemae",
     aliases: "Aaila Baila Seeme",
-    description: "Boundaries from Hubbathalai to Hulivare",
+    description: "",
     hatties: [
       "Ali Ooru",
       "Ane ode",
@@ -220,7 +220,7 @@ export const seemais: SeemaiData[] = [
     id: "mekkuNadu",
     name: "Mekku Nadu Seemae",
     aliases: "Asala Bisalagiri Seemay",
-    description: "Boundaries from Ketti to Keeyur",
+    description: "",
     hatties: [
       "Aadakore (Thulidale)",
       "Achanakal",
