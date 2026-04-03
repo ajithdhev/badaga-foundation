@@ -10,7 +10,7 @@ import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", display: "swap" });
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
+const GA_ID = "G-DSL7GVS8J3";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -136,22 +136,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        {/* Google Analytics 4 */}
-        {GA_ID && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}', { page_path: window.location.pathname });
-                `,
-              }}
-            />
-          </>
-        )}
+        {/* Google Analytics 4 — G-DSL7GVS8J3 */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}');
+            `,
+          }}
+        />
         {/* Schema.org structured data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c") }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd).replace(/</g, "\\u003c") }} />
