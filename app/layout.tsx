@@ -14,6 +14,11 @@ const GA_ID = "G-DSL7GVS8J3";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+    shortcut: "/logo.png",
+  },
   title: {
     default: `${SITE_NAME} — Badagas of the Nilgiri Hills`,
     template: `%s | ${SITE_NAME}`,
