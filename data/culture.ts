@@ -11,17 +11,15 @@ export const festivals: Festival[] = [
       "Ritual purification bath at dawn",
       "Lighting of sacred oil lamps at the Hethai temple",
       "Community prayer with the village elder (Hetagaara)",
-      "Offering of fresh Pongal rice and vegetables to the goddess",
       "Group singing of Hethai devotional songs",
       "Village procession with traditional music",
       "Community feast shared by all families",
     ],
-    significance: "Hethai Habba reaffirms the spiritual identity of the Badaga people and their ancestral covenant with the goddess. It is also an occasion for resolving community disputes and renewing social bonds across villages.",
+    significance: "Hethai Habba reaffirms the spiritual identity of the Badaga people and their ancestral covenant with the goddess. It is an occasion for renewing social bonds across villages.",
   },
   {
     id: "fest2",
     name: "Dodda Habba",
-    nameBadaga: "ದೊಡ್ಡ ಹಬ್ಬ",
     month: "March–April",
     description: "The 'Great Festival': a major agricultural celebration marking the beginning of the planting season. Communities gather for multi-day celebrations involving folk dances, communal farming rituals, and thanksgiving to the earth goddess.",
     rituals: [
@@ -36,8 +34,8 @@ export const festivals: Festival[] = [
   {
     id: "fest3",
     name: "Maari Habba",
-    month: "June–July",
-    description: "Maari Habba is the Badaga festival of worship for Amman, the powerful goddess of rain, fertility, and protection. Celebrated across villages during the monsoon season, the entire community gathers to offer prayers to Amman, seeking her blessings for healthy rains, bountiful harvests, and protection from disease and calamity. Amman worship is a deeply revered tradition and Maari Habba is one of the most emotionally charged festivals in the Badaga calendar.",
+    month: "March–April",
+    description: "Maari Habba is the Badaga festival of worship for Amman, the powerful goddess of rain, fertility, and protection. Celebrated across villages, the entire community gathers to offer prayers to Amman, seeking her blessings for healthy rains and protection from disease and calamity. Amman worship is a deeply revered tradition and Maari Habba is one of the most emotionally charged festivals in the Badaga calendar.",
     rituals: [
       "Ritual purification of the Amman shrine and surrounding area",
       "Offerings of kumkum, turmeric, coconut, flowers, and fruits to the goddess",

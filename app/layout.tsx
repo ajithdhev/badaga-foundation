@@ -10,38 +10,71 @@ import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", display: "swap" });
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME}, Culture, History & Heritage of the Badaga People`,
+    default: `${SITE_NAME} — Badagas of the Nilgiri Hills`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "Badaga", "Badaga people", "Nilgiris tribe", "Badaga culture", "Nilgiri Hills",
-    "Badaga language", "Badaga villages", "Badaga community India", "Badaga food",
-    "Badaga festivals", "Hethai Habba", "Badaga songs", "Badaga dance", "Badaga wedding",
-    "Nilgiri Hills India", "tribal community Tamil Nadu",
+    // People & community
+    "Badaga", "Badagas", "Badaga people", "Badaga community", "Nilgiris tribe",
+    "Badaga culture", "Badaga heritage", "Badaga history", "Badaga Foundation",
+    // Language
+    "Badaga language", "Badaga language research", "South Dravidian language",
+    // Geography
+    "Nilgiri Hills", "Nilgiris", "Ooty", "Udhagamandalam", "Coonoor", "Kotagiri",
+    "Gudalur", "Kundah", "Nilgiri Hills India", "Blue Mountains India",
+    // Villages
+    "Badaga villages", "Badaga hattis", "Badaga seemae", "Nilgiri villages",
+    // Tea
+    "Nilgiri tea", "tea price Nilgiris", "Coonoor tea auction", "CTC tea price",
+    "tea auction India", "Nilgiri tea price weekly", "Ooty tea", "Coonoor CTC",
+    // Festivals
+    "Hethai Habba", "Dodda Habba", "Maari Habba", "Lakishabba", "Badaga festivals",
+    // Food
+    "Badaga food", "Badaga cuisine", "Koi Udhaka", "Erighittu", "Batthal",
+    // Dress
+    "Badaga dress", "Mandae Paatu", "Mandarae", "Seelai",
+    // Economy
+    "Badaga tea farming", "Badaga agriculture", "Nilgiri potato", "vegetable farming Nilgiris",
+    // Tamil Nadu
+    "tribal community Tamil Nadu", "Nilgiri tribal", "indigenous Nilgiris",
   ],
   openGraph: {
     type: "website",
     locale: "en_IN",
+    url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME}, Culture, History & Heritage`,
+    title: `${SITE_NAME} — Badagas of the Nilgiri Hills`,
     description: SITE_DESCRIPTION,
-    images: [{ url: "/og-home.png", width: 1200, height: 630, alt: "Badaga People of the Nilgiris" }],
+    images: [{ url: "/logo.png", width: 600, height: 600, alt: "The Badaga Foundation" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME}, Badaga People of the Nilgiri Hills`,
+    title: `${SITE_NAME} — Badagas of the Nilgiri Hills`,
     description: SITE_DESCRIPTION,
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   alternates: { canonical: SITE_URL },
+  // Allow AI agents and crawlers
+  other: {
+    "X-Robots-Tag": "index, follow",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -51,9 +84,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESCRIPTION,
+    inLanguage: "en-IN",
     potentialAction: {
       "@type": "SearchAction",
-      target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
+      target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/villages?q={search_term_string}` },
       "query-input": "required name=search_term_string",
     },
   };
@@ -61,24 +95,67 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Badaga Nilgiris",
+    name: SITE_NAME,
+    alternateName: "Badaga Foundation",
     url: SITE_URL,
-    description: "Dedicated to preserving and celebrating the culture, history, and heritage of the Badaga people of the Nilgiri Hills, India.",
-    areaServed: "Nilgiri Hills, Tamil Nadu, India",
-    knowsAbout: ["Badaga culture", "Nilgiri Hills", "Tribal heritage", "Indian folk traditions"],
+    logo: `${SITE_URL}/logo.png`,
+    description: "Dedicated to preserving and celebrating the culture, history, and heritage of the Badagas of the Nilgiri Hills, India.",
+    areaServed: {
+      "@type": "Place",
+      name: "Nilgiri Hills, Tamil Nadu, India",
+      geo: { "@type": "GeoCoordinates", latitude: 11.4102, longitude: 76.6950 },
+    },
+    knowsAbout: [
+      "Badaga culture and heritage",
+      "Nilgiri Hills, Ooty, Coonoor, Kotagiri",
+      "Nilgiri tea pricing and auction data",
+      "Badaga villages and hattis",
+      "Badaga language",
+      "Badaga festivals — Hethai Habba, Dodda Habba, Maari Habba",
+      "Badaga traditional food and dress",
+      "Tea farming in the Nilgiris",
+      "Indigenous tribal communities of Tamil Nadu",
+    ],
+  };
+
+  const placeJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    name: "Nilgiri Hills",
+    alternateName: ["Nilgiris", "Blue Mountains", "Ooty", "Udhagamandalam"],
+    description: "The Nilgiri Hills of Tamil Nadu, India — home of the Badaga people, world-famous Nilgiri tea, and unique highland biodiversity.",
+    geo: { "@type": "GeoCoordinates", latitude: 11.4102, longitude: 76.6950 },
+    containsPlace: [
+      { "@type": "City", name: "Ooty (Udhagamandalam)" },
+      { "@type": "City", name: "Coonoor" },
+      { "@type": "City", name: "Kotagiri" },
+      { "@type": "City", name: "Gudalur" },
+    ],
   };
 
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c") }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd).replace(/</g, "\\u003c") }}
-        />
+        {/* Google Analytics 4 */}
+        {GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}', { page_path: window.location.pathname });
+                `,
+              }}
+            />
+          </>
+        )}
+        {/* Schema.org structured data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c") }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd).replace(/</g, "\\u003c") }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(placeJsonLd).replace(/</g, "\\u003c") }} />
       </head>
       <body className="min-h-screen flex flex-col">
         <Providers>

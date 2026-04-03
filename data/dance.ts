@@ -68,7 +68,7 @@ export const dressForms = {
       {
         name: "Mandae Paatu",
         badagaName: "மண்டே பாட்டு",
-        description: "Mandae Paatu is the traditional head cloth of Badaga women, characteristically distinguished by a red ribbon. It is tied or draped over the head and is a mark of a married woman's identity in the community. The Mandae Paatu is worn at all festivals, ceremonies, and auspicious occasions, the red ribbon is its most defining feature, making it instantly recognisable as a uniquely Badaga garment.",
+        description: "Mandae Paatu is the traditional head cloth of Badaga women, characteristically distinguished by a red ribbon. It is tied or draped over the head and is a mark of an elderly woman's identity in the community. The Mandae Paatu is worn at all festivals, ceremonies, and auspicious occasions, the red ribbon is its most defining feature, making it instantly recognisable as a uniquely Badaga garment.",
       },
     ],
   },
@@ -83,7 +83,7 @@ export const dressForms = {
       {
         name: "Mandarae",
         badagaName: "மண்டரே",
-        description: "The Mandarae is the traditional head turban of Badaga men, a length of white or cream-coloured cloth wrapped around the head. Senior men, village elders (Hetagaaras), and community leaders wear the Mandarae on ceremonial occasions, festivals, and community gatherings. The turban signals authority, elder status, and ritual participation. The style of tying varies by occasion and village.",
+        description: "The Mandarae is the traditional head turban of Badaga men, a length of white or cream-coloured cloth wrapped around the head. Senior men and community leaders wear the Mandarae on ceremonial occasions, festivals, and community gatherings. The turban signals authority, elder status, and ritual participation. The style of tying varies by occasion and village.",
       },
     ],
   },

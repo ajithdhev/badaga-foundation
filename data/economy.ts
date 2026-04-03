@@ -10,9 +10,9 @@ export const economyActivities: EconomyActivity[] = [
   },
   {
     id: "e2",
-    name: "Potato & Vegetable Farming",
+    name: "Vegetable Farming",
     icon: "🥔",
-    description: "The famous Nilgiri potato: grown at high altitudes: is a premium product sold across India. Badaga farmers also grow carrots, cabbage, beans, peas, beetroot, and other temperate vegetables that thrive in the Nilgiri climate. The Ketti Valley is particularly renowned for its vegetable output.",
+    description: "The famous Nilgiri potato, grown at high altitudes, is a premium product sold across India. Badaga farmers also grow carrots, cabbage, beans, peas, beetroot, and other temperate vegetables that thrive in the Nilgiri climate.",
     percentage: 25,
   },
   {
