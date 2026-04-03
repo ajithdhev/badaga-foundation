@@ -51,13 +51,13 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} — Badagas of the Nilgiri Hills`,
     description: SITE_DESCRIPTION,
-    images: [{ url: "/logo.png", width: 600, height: 600, alt: "The Badaga Foundation" }],
+    images: [{ url: "/og-image.png", width: 1135, height: 928, alt: "The Badaga Foundation" }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — Badagas of the Nilgiri Hills`,
     description: SITE_DESCRIPTION,
-    images: ["/logo.png"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
