@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Badaga Nilgiris Logo">
+  <defs>
+    <!-- Gold gradient for umbrella fill -->
+    <radialGradient id="umbrellaFill" cx="50%" cy="30%" r="70%">
+      <stop offset="0%"  stop-color="#F7E97A"/>
+      <stop offset="35%" stop-color="#D4A832"/>
+      <stop offset="75%" stop-color="#B8861C"/>
+      <stop offset="100%" stop-color="#7A540E"/>
+    </radialGradient>
+
+    <!-- Gold gradient for text and rings -->
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#F7E97A"/>
+      <stop offset="40%" stop-color="#C4973A"/>
+      <stop offset="100%" stop-color="#8B6215"/>
+    </linearGradient>
+
+    <!-- Shimmer gold for highlights -->
+    <linearGradient id="goldShimmer" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#FFF0A0"/>
+      <stop offset="50%" stop-color="#E0B040"/>
+      <stop offset="100%" stop-color="#9B7018"/>
+    </linearGradient>
+
+    <!-- Scallop fill (slightly lighter gold) -->
+    <linearGradient id="scallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#E8C860"/>
+      <stop offset="100%" stop-color="#B07820"/>
+    </linearGradient>
+
+    <!-- Background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%"  stop-color="#1A0E02"/>
+      <stop offset="100%" stop-color="#0A0500"/>
+    </radialGradient>
+
+    <!-- Arc paths for text -->
+    <path id="topArc" d="M 34,118 A 120,120 0 0,1 266,118"/>
+    <path id="botArc" d="M 258,196 A 120,120 0 0,1 42,196"/>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BACKGROUND                                  -->
+  <!-- ═══════════════════════════════════════════ -->
+  <circle cx="150" cy="150" r="149" fill="url(#bgGrad)"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- OUTER RINGS                                 -->
+  <!-- ═══════════════════════════════════════════ -->
+  <circle cx="150" cy="150" r="145" fill="none" stroke="#C4973A" stroke-width="0.6"/>
+  <circle cx="150" cy="150" r="141" fill="none" stroke="#F7E97A" stroke-width="2.5"/>
+  <circle cx="150" cy="150" r="136" fill="none" stroke="#C4973A" stroke-width="0.8"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- DIAMOND ORNAMENTS AT CARDINAL POINTS        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- North -->
+  <polygon points="150,2  156,10 150,18 144,10" fill="#D4A832" stroke="#F7E97A" stroke-width="0.5"/>
+  <!-- South -->
+  <polygon points="150,282 156,290 150,298 144,290" fill="#D4A832" stroke="#F7E97A" stroke-width="0.5"/>
+  <!-- East -->
+  <polygon points="282,150 290,144 298,150 290,156" fill="#D4A832" stroke="#F7E97A" stroke-width="0.5"/>
+  <!-- West -->
+  <polygon points="2,150 10,144 18,150 10,156"  fill="#D4A832" stroke="#F7E97A" stroke-width="0.5"/>
+
+  <!-- Small dots between diamonds -->
+  <circle cx="150" cy="5"   r="1.2" fill="#C4973A"/>
+  <circle cx="295" cy="150" r="1.2" fill="#C4973A"/>
+  <circle cx="150" cy="295" r="1.2" fill="#C4973A"/>
+  <circle cx="5"   cy="150" r="1.2" fill="#C4973A"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- TOP TEXT: BADAGA                            -->
+  <!-- ═══════════════════════════════════════════ -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="bold"
+        fill="url(#goldShimmer)" letter-spacing="7">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">BADAGA</textPath>
+  </text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BOTTOM TEXT: NILGIRIS                       -->
+  <!-- ═══════════════════════════════════════════ -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="bold"
+        fill="url(#goldShimmer)" letter-spacing="6">
+    <textPath href="#botArc" startOffset="50%" text-anchor="middle">NILGIRIS</textPath>
+  </text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- DIVIDER LINES (top and bottom)              -->
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- Top divider -->
+  <line x1="52"  y1="76" x2="133" y2="76" stroke="#C4973A" stroke-width="0.9"/>
+  <line x1="167" y1="76" x2="248" y2="76" stroke="#C4973A" stroke-width="0.9"/>
+  <polygon points="150,70 155,76 150,82 145,76" fill="#D4A832" stroke="#F7E97A" stroke-width="0.4"/>
+
+  <!-- Bottom divider -->
+  <line x1="52"  y1="224" x2="133" y2="224" stroke="#C4973A" stroke-width="0.9"/>
+  <line x1="167" y1="224" x2="248" y2="224" stroke="#C4973A" stroke-width="0.9"/>
+  <polygon points="150,218 155,224 150,230 145,224" fill="#D4A832" stroke="#F7E97A" stroke-width="0.4"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CEREMONIAL UMBRELLA (Badaga Kudai)          -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- POLE -->
+  <rect x="148" y="142" width="4" height="72" rx="2" fill="url(#goldShimmer)"/>
+
+  <!-- HANDLE / FERRULE at bottom of pole -->
+  <ellipse cx="150" cy="216" rx="9" ry="4" fill="none" stroke="#D4A832" stroke-width="1.8"/>
+  <line x1="141" y1="216" x2="159" y2="216" stroke="#D4A832" stroke-width="1.8"/>
+
+  <!-- FINIAL SPIKE at top -->
+  <line x1="150" y1="97" x2="150" y2="88" stroke="#F7E97A" stroke-width="2" stroke-linecap="round"/>
+  <!-- Finial ball -->
+  <circle cx="150" cy="85" r="5.5" fill="url(#goldShimmer)" stroke="#F7E97A" stroke-width="0.8"/>
+  <!-- Finial star points -->
+  <polygon points="150,77 151.5,83 150,89 148.5,83" fill="#F7E97A" opacity="0.8"/>
+  <polygon points="143,85 149,83.5 155,85 149,86.5" fill="#F7E97A" opacity="0.8"/>
+
+  <!-- CANOPY DOME - main filled shape -->
+  <!-- Left half: from (80,142) curving up to peak (150,92) -->
+  <!-- Right half: from peak (150,92) curving down to (220,142) -->
+  <path d="M 80,142 C 80,105 115,92 150,92 C 185,92 220,105 220,142 Z"
+        fill="url(#umbrellaFill)" opacity="0.95"/>
+
+  <!-- Inner dome highlight (lighter sheen at top) -->
+  <path d="M 110,130 C 112,108 128,98 150,97 C 172,98 188,108 190,130"
+        fill="none" stroke="#FFF0A0" stroke-width="1" opacity="0.4"/>
+
+  <!-- DOME RIBS (7 lines from center point to dome edge) -->
+  <g stroke="#7A540E" stroke-width="0.9" opacity="0.75">
+    <!-- Center (straight up) -->
+    <line x1="150" y1="142" x2="150" y2="92"/>
+    <!-- Left ribs -->
+    <line x1="150" y1="142" x2="114" y2="97"/>
+    <line x1="150" y1="142" x2="86"  y2="120"/>
+    <line x1="150" y1="142" x2="80"  y2="142"/>
+    <!-- Right ribs -->
+    <line x1="150" y1="142" x2="186" y2="97"/>
+    <line x1="150" y1="142" x2="214" y2="120"/>
+    <line x1="150" y1="142" x2="220" y2="142"/>
+  </g>
+
+  <!-- DOME OUTLINE (gold border on top) -->
+  <path d="M 80,142 C 80,105 115,92 150,92 C 185,92 220,105 220,142"
+        fill="none" stroke="#F7E97A" stroke-width="1.6"/>
+
+  <!-- SCALLOPED / FRILLED BOTTOM EDGE -->
+  <!-- 7 scallops from x=80 to x=220 (140px ÷ 7 = 20px each), arcing upward -->
+  <path d="M 80,142
+    a 10,8 0 0,1 20,0
+    a 10,8 0 0,1 20,0
+    a 10,8 0 0,1 20,0
+    a 10,8 0 0,1 20,0
+    a 10,8 0 0,1 20,0
+    a 10,8 0 0,1 20,0
+    a 10,8 0 0,1 20,0"
+    fill="url(#scallGrad)" stroke="#F7E97A" stroke-width="1.2"/>
+
+  <!-- FRINGE TASSELS at scallop peaks -->
+  <!-- Scallop peaks at x = 80+10=90, 110, 130, 150, 170, 190, 210 and y=142-8=134 -->
+  <g fill="#D4A832" stroke="#C4973A" stroke-width="0.4">
+    <ellipse cx="90"  cy="148" rx="2.5" ry="4.5"/>
+    <ellipse cx="110" cy="148" rx="2.5" ry="4.5"/>
+    <ellipse cx="130" cy="148" rx="2.5" ry="4.5"/>
+    <ellipse cx="150" cy="148" rx="2.5" ry="4.5"/>
+    <ellipse cx="170" cy="148" rx="2.5" ry="4.5"/>
+    <ellipse cx="190" cy="148" rx="2.5" ry="4.5"/>
+    <ellipse cx="210" cy="148" rx="2.5" ry="4.5"/>
+  </g>
+  <!-- Tassel tips (small gold circles) -->
+  <g fill="#F7E97A">
+    <circle cx="90"  cy="153" r="2.2"/>
+    <circle cx="110" cy="153" r="2.2"/>
+    <circle cx="130" cy="153" r="2.2"/>
+    <circle cx="150" cy="153" r="2.2"/>
+    <circle cx="170" cy="153" r="2.2"/>
+    <circle cx="190" cy="153" r="2.2"/>
+    <circle cx="210" cy="153" r="2.2"/>
+  </g>
+
+  <!-- SECONDARY TIER (smaller frill below main scallops, classic ceremonial look) -->
+  <path d="M 95,152
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0
+    a 5,5 0 0,1 10,0"
+    fill="url(#scallGrad)" stroke="#D4A832" stroke-width="0.8" opacity="0.85"/>
+
+  <!-- POLE COLLAR at canopy base -->
+  <rect x="146" y="140" width="8" height="5" rx="2" fill="url(#goldShimmer)"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- DECORATIVE DOTS / STARS IN LOWER SECTION   -->
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- Small decorative stars flanking the divider -->
+  <text x="70"  y="228" font-size="7" fill="#C4973A" text-anchor="middle">✦</text>
+  <text x="230" y="228" font-size="7" fill="#C4973A" text-anchor="middle">✦</text>
+  <text x="70"  y="80"  font-size="7" fill="#C4973A" text-anchor="middle">✦</text>
+  <text x="230" y="80"  font-size="7" fill="#C4973A" text-anchor="middle">✦</text>
+</svg>

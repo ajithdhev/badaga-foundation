@@ -1,0 +1,77 @@
+import type { WeddingRitual } from "@/types/badaga";
+
+export const weddingRituals: WeddingRitual[] = [
+  {
+    step: 1,
+    name: "Nischayatartham (Engagement)",
+    nameBadaga: "Nischaya Tamboolam",
+    timing: "Pre-wedding",
+    description: "The formal engagement ceremony where elders from both families meet at the bride's home. The groom's family presents betel leaves, areca nuts, turmeric, coconut, fruits, and gold jewellery to the bride's family as a symbol of their commitment. The horoscopes are matched and an auspicious wedding date is fixed by the village priest.",
+    significance: "This ceremony formally announces the alliance between two families and two kolas (clans), binding them with sacred obligations. The exchange of tamboolam (betel leaf packet) is the binding contract in Badaga tradition.",
+  },
+  {
+    step: 2,
+    name: "Ooru Kooduvadu (Village Gathering)",
+    timing: "Pre-wedding",
+    description: "The bride's and groom's villages are formally notified of the upcoming wedding. Elders from both villages gather to bless the union and ensure no ancestral clan violations. Community announcements are made at the village temple. The wedding is considered a union of two villages, not just two families.",
+    significance: "Badaga weddings are community events. The village's blessing is as important as family consent. This ritual ensures community acceptance and invites the entire village to participate.",
+  },
+  {
+    step: 3,
+    name: "Mangala Snaanam (Auspicious Bath)",
+    nameBadaga: "Shubha Snaana",
+    timing: "Wedding day",
+    description: "At dawn on the wedding day, the bride and groom each undergo a ritual bath at their respective homes. Turmeric paste is applied to their bodies by senior women of the family, followed by a bath in water infused with sacred herbs. This purifies them for the sacred ceremony ahead.",
+    significance: "The turmeric bath symbolises purification and protection. The golden-yellow turmeric is associated with auspiciousness, divine blessing, and the warding off of evil spirits.",
+  },
+  {
+    step: 4,
+    name: "Kappu Kettu (Tying of the Sacred Thread)",
+    nameBadaga: "Kappu Kattuvadu",
+    timing: "Wedding day",
+    description: "The central ceremony of the Badaga wedding. The priest ties a sacred yellow thread (dyed with turmeric) around the right wrist of both the bride and groom, a symbol of their spiritual and social union. The community gathers for this moment, and the eldest women sing the traditional Kappu Kettu Paattu (sacred thread song) in unison.",
+    significance: "The sacred thread represents the divine bond between the couple. It is equivalent to the mangalsutra tying in other Hindu ceremonies and marks the irrevocable union of the couple before the community and the goddess Hethai.",
+  },
+  {
+    step: 5,
+    name: "Maangalyam Thalikkal (Tying of the Wedding Necklace)",
+    timing: "Wedding day",
+    description: "The groom ties the sacred Mangalsutra (wedding necklace) around the bride's neck, traditionally made of black beads strung on turmeric-dyed thread with a gold pendant. This is done while the priest chants sacred Vedic mantras and the assembled community sings wedding songs.",
+    significance: "The Mangalsutra is the mark of a married Badaga woman. It is worn throughout her life and is the most sacred piece of jewellery she possesses. Losing or removing it is considered deeply inauspicious.",
+  },
+  {
+    step: 6,
+    name: "Homam (Sacred Fire Ceremony)",
+    timing: "Wedding day",
+    description: "The couple takes seven sacred steps (Saptapadi) around a ceremonial fire lit by the priest. With each step, they make vows, for nourishment, strength, prosperity, happiness, children, health, and lifelong companionship. The fire is the witness and the divine messenger carrying their vows to the gods.",
+    significance: "The sacred fire (Agni) is the eternal witness and purifier. Walking around the fire seven times is the most binding act in a Hindu ceremony, it transforms the couple spiritually and legally into husband and wife.",
+  },
+  {
+    step: 7,
+    name: "Paada Puja (Feet Blessing Ceremony)",
+    timing: "Wedding day",
+    description: "The bride washes the feet of her new parents-in-law and receives their blessing. She then receives gifts from each member of the groom's family. The groom's family formally welcomes the bride by placing a garland of flowers around her neck and giving her the family name.",
+    significance: "This ritual marks the bride's formal acceptance into the groom's family and village community. It establishes the bonds of respect and affection that will sustain the new household.",
+  },
+  {
+    step: 8,
+    name: "Virundu (Wedding Feast)",
+    timing: "Wedding day",
+    description: "A grand communal feast where the entire village, and guests from neighbouring villages, are fed. Traditional Badaga dishes are prepared in large quantities: Pongal, Kizhangu curry, Kaayi Saaru, Akki Roti, Payasam, and more. The feast can continue for two to three days. No guest is turned away, this is a sacred Badaga obligation of hospitality.",
+    significance: "The wedding feast embodies the Badaga value of communal sharing and abundance. A family's honour is measured by the generosity of their feast. The entire community participates in cooking and serving.",
+  },
+  {
+    step: 9,
+    name: "Vasthralankara (Bridal Gifts of Clothing)",
+    timing: "Post-wedding",
+    description: "After the wedding, both families exchange gifts of clothing, jewellery, and household items. The groom's family provides the bride with her first set of sarees as a married woman. The bride's family gifts the groom a new set of formal clothes for his role as a husband.",
+    significance: "This exchange cements the alliance between the two families and marks the beginning of a lifelong relationship of mutual support and gift-giving.",
+  },
+  {
+    step: 10,
+    name: "Griha Pravesh (Entry into New Home)",
+    timing: "Post-wedding",
+    description: "The bride enters the groom's home for the first time as its mistress. She overturns a pot of rice at the threshold (symbolising abundance), lights the hearth fire, and is shown the house by her mother-in-law. She then cooks the first meal in her new home, a simple rice dish offered to the household deity.",
+    significance: "This ceremony marks the bride's transformation into the keeper of the new household. Lighting the hearth fire symbolises her role as the nurturer and sustainer of the family. It is one of the most emotionally significant moments of the entire wedding.",
+  },
+];
