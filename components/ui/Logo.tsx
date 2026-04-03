@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface LogoProps {
   size?: number;
   className?: string;
@@ -7,13 +5,18 @@ interface LogoProps {
 
 export default function Logo({ size = 48, className = "" }: LogoProps) {
   return (
-    <Image
-      src="/logo.png"
-      alt="Badagas Nilgiris Logo"
-      width={size}
-      height={size}
+    <div
+      style={{ width: size, height: size, minWidth: size, minHeight: size }}
       className={className}
-      priority
-    />
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/logo.png"
+        alt="The Badaga Foundation"
+        width={size}
+        height={size}
+        style={{ width: size, height: size, display: "block" }}
+      />
+    </div>
   );
 }

@@ -39,7 +39,7 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-2 text-badaga-cream font-serif font-bold text-lg hover:text-badaga-gold transition-colors"
           >
-            <Logo size={32} className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10" />
+            <Logo size={36} className="flex-shrink-0 rounded-full" />
             <span className="hidden sm:inline">{SITE_NAME}</span>
           </Link>
 
