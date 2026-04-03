@@ -31,7 +31,7 @@
   }
 
   /* Horizontal scrolling ticker */
-  --animate-ticker: ticker 55s linear infinite;
+  --animate-ticker: ticker 20s linear infinite;
 
   @keyframes ticker {
     0%   { transform: translateX(0); }
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tea rate ticker */
 .animate-ticker {
-  animation: ticker 55s linear infinite;
+  animation: ticker 20s linear infinite;
 }
 @keyframes ticker {
   0%   { transform: translateX(0); }
